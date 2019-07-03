@@ -4,10 +4,10 @@ FROM openjdk:8-alpine
 # MAINTAINER
 MAINTAINER sxlehua "sxlehua@qq.com"
 
-# 修改来源
+# 淇敼鏉ユ簮
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
-# 修改时区
+# 淇敼鏃跺尯
 RUN apk update \
 && apk add --no-cache bash tzdata \
 && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
