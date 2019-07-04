@@ -8,7 +8,14 @@ MAINTAINER sxlehua "sxlehua@qq.com"
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 # 修改时区
+# RUN apk update \
+# && apk add --no-cache bash tzdata \
+# && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+# && echo "Asia/Shanghai" > /etc/timezone
+
+# 修改时区
 RUN apk update \
 && apk add --no-cache bash tzdata \
-&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-&& echo "Asia/Shanghai" > /etc/timezone
+&& cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+&& echo "Asia/Shanghai" > /etc/timezone \
+&& apk del tzdata
