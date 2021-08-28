@@ -1,7 +1,8 @@
 # sxlehua/java8:openjdk
 # docker build -t sxlehua/java8:openjdk .
 # docker tag sxlehua/java8:openjdk sxlehua/java8
-FROM openjdk:8
+#FROM openjdk:8
+FROM openjdk:8-buster
 
 # MAINTAINER
 MAINTAINER sxlehua "sxlehua@qq.com"
