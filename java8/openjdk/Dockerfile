@@ -8,7 +8,7 @@ FROM openjdk:8-oraclelinux7
 MAINTAINER sxlehua "sxlehua@qq.com"
 
 # 修改源
-RUN	sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+# RUN	sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 # 增加常用软件
 # RUN	apt-get update; \
