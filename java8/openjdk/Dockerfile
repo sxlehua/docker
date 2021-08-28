@@ -16,7 +16,7 @@ MAINTAINER sxlehua "sxlehua@qq.com"
 #		net-tools \
 #	; \
 #	rm -rf /var/lib/apt/lists/*
-RUN yum install -y net-tools vi && yum clean all
+RUN yum install -y net-tools iputils vi && yum clean all
 
 # 设置时区
 RUN echo "Asia/Shanghai" > /etc/timezone \
